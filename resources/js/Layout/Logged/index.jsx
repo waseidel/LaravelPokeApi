@@ -9,6 +9,7 @@ export const Logged = () => {
         baseURL: import.meta.env.REACT_APP_BASE_URL,
         headers: {
             "X-Requested-With": "XMLHttpRequest",
+            "Content-Type": "application/json",
         },
         withCredentials: true,
     });
