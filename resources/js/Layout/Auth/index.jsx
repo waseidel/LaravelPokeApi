@@ -6,9 +6,9 @@ export const Auth = () => {
     const navigate = useNavigate();
     const http = axios.create({
         baseURL: import.meta.env.REACT_APP_BASE_URL,
-        headers: {
-            "X-Requested-With": "XMLHttpRequest",
-        },
+        // headers: {
+        // "X-Requested-With": "XMLHttpRequest",
+        // },
         withCredentials: true,
     });
 
