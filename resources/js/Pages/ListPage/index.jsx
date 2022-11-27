@@ -10,7 +10,7 @@ export const ListPage = () => {
     });
     const [isLoading, setIsLoading] = useState(true);
     const http = axios.create({
-        baseURL: "http://localhost",
+        baseURL: import.meta.env.REACT_APP_BASE_URL,
         headers: {
             "X-Requested-With": "XMLHttpRequest",
         },

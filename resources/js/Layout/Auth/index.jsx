@@ -5,7 +5,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 export const Auth = () => {
     const navigate = useNavigate();
     const http = axios.create({
-        baseURL: "http://localhost",
+        baseURL: import.meta.env.REACT_APP_BASE_URL,
         headers: {
             "X-Requested-With": "XMLHttpRequest",
         },

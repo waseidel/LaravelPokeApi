@@ -6,7 +6,7 @@ import { NavMenu } from "./NavMenu";
 export const Logged = () => {
     const navigate = useNavigate();
     const http = axios.create({
-        baseURL: "http://localhost",
+        baseURL: import.meta.env.REACT_APP_BASE_URL,
         headers: {
             "X-Requested-With": "XMLHttpRequest",
         },

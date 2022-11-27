@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Abilities } from "./Abilities";
 import { Type } from "./Type";
 
@@ -9,7 +9,7 @@ export const PokemonPage = () => {
     const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
     const http = axios.create({
-        baseURL: "http://localhost",
+        baseURL: import.meta.env.REACT_APP_BASE_URL,
         headers: {
             "X-Requested-With": "XMLHttpRequest",
         },
