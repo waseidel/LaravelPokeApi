@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export const RegisterPage = ({ http }) => {
+export const RegisterPage = () => {
     const navigate = useNavigate();
     const [errors, setErrors] = useState({});
     const [user, setUser] = useState({
@@ -9,6 +9,14 @@ export const RegisterPage = ({ http }) => {
         email: "",
         password: "",
         password_confirmation: "",
+    });
+    const http = axios.create({
+        baseURL: import.meta.env.REACT_APP_BASE_URL,
+        headers: {
+            "X-Requested-With": "XMLHttpRequest",
+            "Content-Type": "application/json",
+        },
+        withCredentials: true,
     });
     const handleChange = ({ target }) => {
         const { name, value } = target;
